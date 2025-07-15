@@ -40,8 +40,8 @@
                         }
                         ?>
                     </h1>
-                    <h5 class="px-5">Welcome to your Instructor Dashboard!</h5>
-                    <p class="px-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error dolore aut corporis aliquam qui? Minima, tenetur? Incidunt, voluptatem. Eos!</p>
+                    <h5 class="px-5">Welcome to instructor dashboard!</h5>
+                    <p class="px-5">Here, you can create, manage, and sell courses to users.</p>
                 </div>
                 <h2 class="m-5"></h2>
             </div>
@@ -113,30 +113,24 @@
 
                 $sql = "SELECT SUM(quantity) as total_quantity, SUM(price) as total_price FROM detail_transaction INNER JOIN course ON detail_transaction.course_id = course.id WHERE detail_transaction.company = '$fullname';";
                 $result = mysqli_query($connection, $sql);
-            ?>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Total</td>
-            <td><?php
                 $row = mysqli_fetch_array($result);
-                echo $row['total_quantity'];                
-            ?></td>
-            <td><?php
-                if (!(function_exists('rupiah'))) {
-                function rupiah($angka) {
-                        $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
-                        return $hasil_rupiah;
-                    } 
-                }
 
-                echo rupiah($row['total_price']);
+                if ($row['total_quantity'] > 0) {
+                ?>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td>Total</td>
+                        <td><?php echo $row['total_quantity']; ?></td>
+                        <td><?php echo rupiah($row['total_price']); ?></td>
+                    </tr>
 
-                $updateSaldo = "UPDATE user SET saldo = '$row[total_price]' WHERE username='$_SESSION[username]' AND role='company'";
-                mysqli_query($connection, $updateSaldo);
-            ?></td>
+                    <?php
+                        // Update saldo hanya jika ada transaksi
+                        $updateSaldo = "UPDATE user SET saldo = '{$row['total_price']}' 
+                                        WHERE username='{$_SESSION['username']}' AND role='company'";
+                        mysqli_query($connection, $updateSaldo);
+                } ?>
+                </td>
         </table>
     </div>
     </div>

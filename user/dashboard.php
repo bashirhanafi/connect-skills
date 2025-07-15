@@ -34,8 +34,8 @@
                 <div class="col-lg-6">
                     <!-- Mashead text and app badges-->
                     <div class="mb-0 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-3 lh-1 mb-3">Welcome!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, praesentium dolor voluptate fugiat esse optio consequuntur vel, magnam et eius, saepe veniam quis! Mollitia recusandae deleniti libero ratione hic autem illo, officiis velit nesciunt numquam, suscipit quisquam adipisci quaerat dolor vitae id minus deserunt cum! Cupiditate dolor blanditiis laboriosam aliquid?</p>
+                        <h1 class="display-3 lh-1 mb-3">Welcome, learner!</h1>
+                        <p>Level up your skills with us! Easily connect with top instructors, access high-quality courses, and take your learning journey to the next level — anytime, anywhere!</p>
                         <button type="button" class="btn btn-warning btn-lg" onclick="window.location.href = '#topsubjects'">Let's explore!</button>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
     </header>
     <!-- Top Courses -->
     <div class="container p-5" id="topsubjects">
-        <h1 class="text-center p-3">Top Subjects</h1>
+        <h1 class="text-center p-3">Recommended for you</h1>
         <div class="card-group d-flex justify-content-center">
             <?php
             include '../connection.php';
@@ -99,8 +99,8 @@
 
                     <div class="user-content">
                         <h5 class="mb-0">Bruce Hardy</h5>
-                        <span>Software Developer</span>
-                        <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum perferendis facilis eaque quia omnis et quidem excepturi vitae laborum rerum?</p>
+                        <span>Designer</span>
+                        <p class="mt-3">ConnectSkills transformed the way I learn! The courses are well-structured, and the instructors are industry professionals. My design skills have improved tremendously, and I’ve even landed more freelance projects!</p>
                     </div>
 
                     <div class="ratings">
@@ -121,8 +121,8 @@
 
                     <div class="user-content">
                         <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p class="mt-3">.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum perferendis facilis eaque quia omnis et quidem excepturi vitae laborum rerum?</p>
+                        <span>Branding Specialist</span>
+                        <p class="mt-3">The best learning platform for creatives! The courses are practical, the community is supportive, and I’ve gained valuable insights that helped me grow my design business.</p>
                     </div>
 
                     <div class="ratings">
@@ -145,7 +145,7 @@
                     <div class="user-content">
                         <h5 class="mb-0">Veera Duncan</h5>
                         <span>Software Architect</span>
-                        <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum perferendis facilis eaque quia omnis et quidem excepturi vitae laborum rerum?</p>
+                        <p class="mt-3">ConnectSkills made it so easy to upskill! The hands-on coding courses and expert instructors helped me master new frameworks and improve my problem-solving skills. It’s the perfect platform for any developer looking to grow</p>
                     </div>
 
                     <div class="ratings">
